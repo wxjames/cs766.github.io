@@ -1,0 +1,35 @@
+#!/bin/bash
+python online_test.py \
+	--root_path ~/\
+	--video_path /home/wisccitl/Desktop/Tower_crane \
+	--annotation_path Hand-signal-recognition/annotation_Towercrane/egogestureall.json \
+	--resume_path_det Hand-signal-recognition/models/Crane_detector.pth \
+	--resume_path_clf Hand-signal-recognition/models/Crane_classifier.pth \
+	--result_path Hand-signal-recognition/results \
+	--dataset egogesture    \
+	--sample_duration_det 8 \
+	--sample_duration_clf 32 \
+	--model_det resnetl \
+	--model_clf resnext \
+	--model_depth_det 10 \
+	--model_depth_clf 101 \
+	--resnet_shortcut_det A \
+	--resnet_shortcut_clf B \
+	--batch_size 1 \
+	--n_classes_det 2 \
+	--n_classes_clf 10 \
+	--n_threads 16 \
+	--checkpoint 1 \
+	--modality_det Depth \
+	--modality_clf Depth \
+	--n_val_samples 1 \
+	--train_crop random \
+	--test_subset test  \
+	--det_strategy median \
+	--det_queue_size 4 \
+	--det_counter 2 \
+	--clf_strategy median \
+	--clf_queue_size 32 \
+	--clf_threshold_pre 1.0 \
+	--clf_threshold_final 0.05 \
+	--stride_len 1 \
