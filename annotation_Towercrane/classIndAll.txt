@@ -1,0 +1,11 @@
+1 Hoist
+2 Lower
+3 Tower_travel
+4 Trolley_left_travel
+5 Trolley_right_travel
+6 Stop
+7 Dog_everything
+8 Move_slowly
+9 Swing
+10 Emergency_stop
+11 None
